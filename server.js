@@ -32,6 +32,15 @@ const MODEL_MAPPING = {
   'gpt-4o-mini': 'deepseek-ai/deepseek-v3-2'
 };
 
+// Root and /v1 ping endpoints
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'OpenAI to NVIDIA NIM Proxy' });
+});
+
+app.get('/v1', (req, res) => {
+  res.json({ status: 'ok', service: 'OpenAI to NVIDIA NIM Proxy' });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ 
