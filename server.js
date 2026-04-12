@@ -33,11 +33,11 @@ const MODEL_MAPPING = {
 };
 
 // Root and /v1 ping endpoints
-app.get('/', (req, res) => {
+app.all('/', (req, res) => {
   res.json({ status: 'ok', service: 'OpenAI to NVIDIA NIM Proxy' });
 });
 
-app.get('/v1', (req, res) => {
+app.all('/v1', (req, res) => {
   res.json({ status: 'ok', service: 'OpenAI to NVIDIA NIM Proxy' });
 });
 
